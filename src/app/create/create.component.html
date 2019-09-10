@@ -1,0 +1,32 @@
+<div class="jumbotron jumbotron-fuid">
+  <h3 class="display-4 text-center"> Create </h3>
+  <div class="container">
+    <div class="col-xs-12">
+      <div class="text-right">
+          <button type="button" (click)= "routeCollection()" class="btn btn-primary text-white"><i class ="fa fa-pencil"></i> Add Collection</button> 
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-10 offset-md-1">
+        <label>Select collection name</label>
+        <select name="collections" class="form-control" (change)="getData($event.target,0)">
+          <option value="0">-Select-</option>
+          <option *ngFor="let item of response let id = index" value="{{item}}">{{item}}</option>
+        </select>
+        <form #form = "ngForm" autocomplete="off" (submit)="onSubmit()">
+          <div class="form-group" *ngFor="let data of services.keys; let i = index">
+            <label>{{data}}:</label>
+            <input name = "{{data}}" #{{data}} = "ngModel"  [(ngModel)]="services.values[i]" class="form-control">
+          </div>
+          <hr>
+          <div class="form-group">
+              <button type="submit" [disabled]="!form.dirty" class="btn btn-secondary ml-1"><i class ="fa fa-database"></i> Submit</button>    
+              <button type="button" (click)= "routeEdit()" class="btn btn-sm btn-warning text-white ml-1"><i class ="fa fa-pencil"></i> Edit</button> 
+              <button type="button" (click)= "routeView()" class="btn btn-sm btn-info text-white ml-1"><i class ="fa fa-list "></i> View</button>  
+              <button type="button" (click)= "deleteData()" class="btn btn-sm btn-danger text-white ml-1"><i class ="fa fa-trash"></i> Delete</button> 
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

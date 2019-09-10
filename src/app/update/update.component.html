@@ -1,0 +1,54 @@
+<div class="jumbotron jumbotron-fuid">
+  <h3 class="display-4 text-center"> Update </h3>
+  <div class="container">
+    <div class="col-xs-12">
+      <div class="text-right">
+          <button type="button" (click)= "routeCollection()" class="btn btn-primary text-white"><i class ="fa fa-pencil"></i> Add Collection</button> 
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-10 offset-md-1">
+        <label>Select collection name</label>
+        <select name="collections" class="form-control" (change)="getData($event.target,0)">
+          <option value="0" selected>-Select-</option>
+          <option *ngFor="let item of response" value="{{item}}">{{item}}</option>
+        </select>
+        <br>
+        <form #form = "ngForm" autocomplete="off" (submit)="onSubmit()">
+          <ng-container *ngIf="services.name === 'ExecuteApi'; then validLabel; else inValidLabel"></ng-container>
+          <ng-template #validLabel> 
+            <div class="container">
+              <div class="form-group" *ngFor="let data of keys; let i = index">
+                  <div class="row">
+                    <div class="col-md-6">
+                        <label>{{data}}</label>
+                    </div>  
+                    <div class="col-md-6">
+                      <input type="checkbox" name ="{{data}}"  #{{data}} = "ngModel"  [(ngModel)]="values[i]" (change)="toggleSelection($event)" style ="margin-top: 3px; height: 20px;width: 60px;">
+                    </div>   
+                </div>  
+              </div>   
+            </div>
+          </ng-template>
+          <ng-template #inValidLabel> 
+            <div class="form-group" *ngFor="let data of services.keys; let i = index">
+              <label *ngIf="i == 0">{{data}}:</label>
+              <input *ngIf="i == 0" name = "{{data}}" #{{data}} = "ngModel" [(ngModel)]="services.values[i]" class="form-control" readonly>
+              <label *ngIf="i != 0">{{data}}:</label>
+              <input *ngIf="i != 0" name = "{{data}}" #{{data}} = "ngModel" [(ngModel)]="services.values[i]" class="form-control">
+            </div>
+           </ng-template>
+          <div class="form-group">
+            <button type="button" class="btn1 ml-1" *ngFor="let pages of data; let id = index" (click)= "getCollectionData(col,id)" [ngClass]="{'active': selectedIndex == id}">{{id+1}}</button>
+          </div>
+          <div class="form-group">
+              <button type="submit" [disabled]="!form.dirty" class="btn btn-dark ml-1"><i class ="fa fa-database"></i> Submit</button>    
+              <button type="button" (click)= "routeView()" class="btn btn-sm btn-info text-white ml-1"><i class ="fa fa-list"></i> View</button> 
+              <button type="button" (click)= "routeCreate()" class="btn btn-sm btn-success text-white ml-1"><i class ="fa fa-plus"></i> Add New</button>  
+              <button type="button" (click)= "deleteData()" class="btn btn-sm btn-danger text-white ml-1"><i class ="fa fa-trash"></i> Delete</button> 
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,115 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<header>
+    <mat-toolbar color="primary">
+      <mat-toolbar-row>
+          <a routerLink="/" class="logo"> <img class="docs-angular-logo" src="../assets/img/download.jpeg"> MongoDB
+          </a>
+          <nav id ="navigate">
+            <ul>
+              <li><a routerLink="/create" >Create </a></li>
+              <li><a routerLink="/read" >Read </a></li>
+              <li><a routerLink="/update" >Update </a></li>
+              <li><a routerLink="/delete" >Delete </a></li>
+              <li><a routerLink="/collection" >Collection </a></li>
+            </ul>
+          </nav>
+      </mat-toolbar-row>
+    </mat-toolbar>
+  </header>
+  
+  <div *ngIf="showLoadingIndicator" class="spinner"></div>
+  <router-outlet></router-outlet>
+
+  <footer class="section footer-classic context-dark bg-image" style="background: #2d3246;">
+
+          <div class="row row-30">
+            <div class="col-md-3 col-xl-5" style="margin-left: 100px;">
+              <div class="pr-xl-4"><a class="brand" href="index.html"><img class="brand-logo-light" src="images/agency/logo-inverse-140x37.png" alt="" width="140" height="37" srcset="images/agency/logo-retina-inverse-280x74.png 2x"></a>
+                <p>You can also visit <a id="link" href="https://www.mongodb.com/" target="_blank" style="color:MediumSeaGreen;">MongoDB </a>offical website and also feel free to get in touch with us, if you like our product</p>
+                <!-- Rights-->
+                <p class="rights"><span>©  </span><span class="copyright-year">2018</span><span> </span><span>TR</span><span>. </span><span>All Rights Reserved.</span></p>
+                <img class="TRlogo" src="../assets/img/tr.png">
+              </div>
+            </div>
+            <div class="col-md-3">
+              <h5>Contacts</h5>
+              <dl class="contact-list">
+                <dt>Address:</dt>
+                <dd>TR, Invenger Ashok Nagar, Mangalore</dd>
+              </dl>
+              <dl class="contact-list">
+                <dt>email:</dt>
+                <dd><a href="mailto:#">ostanprithesh.dsouza@tr.com</a></dd>
+              </dl>
+              <dl class="contact-list">
+                <dt>phones:</dt>
+                <dd><a href="tel:#">+91 8246612260</a> <span> or </span> <a href="tel:#">+91 9571195353</a>
+                </dd>
+              </dl>
+            </div>
+            <div class="col-md-3 col-xl-3">
+              <h5 >Links</h5>
+              <ul class="nav-list">
+                <li><a routerLink="/">Home</a></li>
+                <li><a routerLink="/collection">Collection</a></li>
+                <li><a routerLink="/create">Create</a></li>
+                <li><a routerLink="/read">Read</a></li>
+                <li><a routerLink="/update">Update</a></li>
+                <li><a routerLink="/delete">Delete</a></li>
+              </ul>
+            </div>
+          </div>
+        <div class="row no-gutters social-container">
+          <div class="col"><a class="social-inner" href="#"><span class="icon mdi mdi-facebook"></span><span>Facebook</span></a></div>
+          <div class="col"><a class="social-inner" href="#"><span class="icon mdi mdi-instagram"></span><span>instagram</span></a></div>
+          <div class="col"><a class="social-inner" href="#"><span class="icon mdi mdi-twitter"></span><span>twitter</span></a></div>
+          <div class="col"><a class="social-inner" href="#"><span class="icon mdi mdi-youtube-play"></span><span>google</span></a></div>
+        </div>
+      </footer>
+  <!--
+  <footer class="footer-distributed">
+    <mat-toolbar color="primary" style="height:30px" class="toolbar">
+        <mat-toolbar-row >
+            <div class="footer-left">
+                <p class="footer-links">
+                    <img id="img" src="./assets/img/mongodb-logo-white.png">
+                    <a id="link" href="https://www.mongodb.com/">Learn MongoDB </a>
+                    <span id="Version">Current Version: 1.0.0</span>
+                </p>
+            </div>
+            <div class="footer-center" style="position: relative ; height: 100px;">
+                <div>
+                    <i class="fa fa-map-marker" style="position: absolute; height: 10px; bottom: 0;"></i>
+                    <p><span>Invenger- TR bilding</span> Ashok Nagar, Mangalore</p>
+                </div>
+
+                <div>
+                    <i class="fa fa-phone" style="position: absolute; height: 10px; bottom: 0;"></i>
+                    <p>0824-6612260</p>
+                </div>
+
+                <div>
+                    <i class="fa fa-envelope" style="position: absolute; height: 10px; bottom: 0;"></i>
+                    <p><a href="mailto:ostanprithesh.dsouza@tr.com">ostanprithesh.dsouza@tr.com</a></p>
+                </div>
+                <div class="footer-icons" style="position: absolute; height: 10px; bottom: 0;">
+
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                    <a href="#"><i class="fa fa-github"></i></a>
+
+                </div>
+            </div>
+            <div class="footer-right"  style="position: relative ; height: 100px;">
+                <span style="position: absolute; height: 10px; bottom: 0;">Powered by TR ©2018-2019.</span>
+                <span style="position: absolute; height: 10px; bottom: 20px;">Code licensed under an MIT-style License.</span>
+                <span style="position: absolute; height: 10px; bottom: 40px;">Author: Ostan Dsouza</span>
+            </div>
+        </mat-toolbar-row>
+    </mat-toolbar>
+  </footer>
+-->
+
+
+

@@ -1,0 +1,64 @@
+<section id="showcase">
+      <h1>Lets get started with Mongo</h1>
+      <article id="sidebar">
+      <p>
+          Mongo is no sql database which can be easily integrated with web applications. MongoDB has gained lot of attention is last couple of years because of its ease of scalability.
+      </p>
+    </article>
+</section>
+
+<section id="database">
+      <h1>Enter the name of the DB</h1>
+          <form #form = "ngForm" (submit)="onSubmit(form)" autocomplete="off">
+              <div class="form-row">
+                  <div class="form-group">
+                      <!--
+                      <div class="input-group-prepend">
+                          <span class="input-group-text" id="basic-addon3">mongodb://localhost:port/DB-Name</span>
+                      </div>
+                      -->
+                      <input required type="text" name="DBname" placeholder="mongodb://localhost:port/DB" #DBname ="ngModel" [(ngModel)]="services.name" class="form-control form-control-lg">
+                      <div class="alert alert-danger" [class.is-invalid] = "DBname.invalid && DBname.touched"  *ngIf="DBname.invalid && DBname.touched">Please enter DB Name</div>
+                  </div>   
+                  <button type="submit" class="btn btn-danger">Go<i class ="fa fa-exclamation"></i></button>          
+              </div>
+              <!--[disabled] = "form.invalid"
+             <input type="text" placeholder="DB name">
+             <button type="submit" [disabled] = "form.invalid" class="btn btn-primary"><i class ="fa fa-exclamation-circle"></i>Go</button>-->
+          </form>
+</section>
+
+<section id="boxes">
+    <div class="outter">
+    <div class="row">
+      <div class="box">
+        <a routerLink="/create"><img src="./assets/img/add.jpeg"></a>
+        <h3> <a routerLink="/create">CREATE</a></h3>
+        <article id="note">
+          <p>Create new entry in DB using POST method</p>
+        </article>
+      </div>
+      <div class="box">
+        <a routerLink="/read"><img src="./assets/img/Read.jpg"></a>
+        <h3> <a routerLink="/read">READ</a></h3>
+        <article id="note">
+          <p>Read entry in DB using GET method</p>
+        </article>
+      </div>
+      <div class="box">
+        <a routerLink="/update"><img src="./assets/img/update.jpeg"></a>
+        <h3> <a routerLink="/update">UPDATE</a></h3>
+        <article id="note">
+          <p>Edit existing entry in DB using UPDATE method</p>
+        </article>
+      </div>
+      <div class="box">
+        <a routerLink="/delete"><img src="./assets/img/delete.png"></a>
+        <h3> <a routerLink="/delete">DELETE</a></h3>
+        <article id="note">
+          <p>Remove existing entry in DB using DELETE method</p>
+        </article>
+      </div>
+    </div>
+</div>
+</section>
