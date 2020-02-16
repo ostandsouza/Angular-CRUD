@@ -23,7 +23,7 @@
     "concurrently": "^5.1.0",
     "core-js": "^2.5.4",
     "express": "^4.16.4",
-    "jquery": "^3.3.1",
+    "jquery": "^3.4.0",
     "mongodb": "^3.1.10",
     "mongoose": "^5.4.0",
     "ng2-toastr": "^4.1.2",
