@@ -1,11 +1,11 @@
-#Angular-CRUD
+# Angular-CRUD
 
 Angular-CRUD is an angualr frontend built for mongoDB for ease of use with any hassle to learn any og mongo commands. This frontend allows you to connect to any mongo server, and allow you to create read update delete document as well as collections as per your need.
 
 To view app visit:
 https://angular-crud.ostanpritheshdsouza.now.sh/
 
-##Getting Started:
+## Getting Started:
 
 1) Download all npm depedancies
 
@@ -19,5 +19,5 @@ eg:  "scripts": {
  
 4)Now once you get an alert toast asying connection was successfull, you ll be able to do  CRUD operation using: CREATE READ UPDATE DELETE COLLECTION
 
-##Authors
+## Authors
 Ostan Dsouza - Initial work
