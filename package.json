@@ -25,7 +25,7 @@
     "express": "^4.16.4",
     "jquery": "^3.3.1",
     "mongodb": "^3.1.10",
-    "mongoose": "^5.4.0",
+    "mongoose": "^5.7.5",
     "ng2-toastr": "^4.1.2",
     "ng6-toastr-notifications": "^1.0.4",
     "ngx-toastr": "^9.1.1",
