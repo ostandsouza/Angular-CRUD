@@ -2,15 +2,11 @@
   "name": "crud",
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve --proxy-config proxyconfig.json --o",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
+    "now-start": "concurrently --kill-others \"ng serve --proxy-config proxyconfig.json --o\" \"node server/main.js\""
   },
   "private": true,
   "dependencies": {
+    "@angular-devkit/build-angular": "~0.11.0",
     "@angular/animations": "^7.1.1",
     "@angular/cdk": "^7.1.1",
     "@angular/common": "~7.1.0",
@@ -24,6 +20,7 @@
     "@types/body-parser": "^1.17.0",
     "body-parser": "^1.18.3",
     "bootstrap": "^4.2.1",
+    "concurrently": "^5.1.0",
     "core-js": "^2.5.4",
     "express": "^4.16.4",
     "jquery": "^3.3.1",
@@ -32,12 +29,12 @@
     "ng2-toastr": "^4.1.2",
     "ng6-toastr-notifications": "^1.0.4",
     "ngx-toastr": "^9.1.1",
+    "node-sass": "^4.13.1",
     "rxjs": "~6.3.3",
     "tslib": "^1.9.0",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.11.0",
     "@angular/cli": "~7.1.2",
     "@angular/compiler-cli": "~7.1.0",
     "@angular/language-service": "~7.1.0",

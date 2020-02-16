@@ -157,15 +157,17 @@
 }
 
 #navigate {
-
+    justify-self: right;
     float: right;
-    margin-left: 0; padding: 0 20px 0 800px;
+    margin: 0; padding: 0;
+    /* margin-left: 0; padding: 0 20px 0 800px; */
+    list-style-type: none;
 } 
 
 #navigate ul{
     list-style-type: none;
     margin: 0; padding: 0;
-    float: right;
+    float: left;
 }
 #navigate li{
     display: inline;
